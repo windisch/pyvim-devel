@@ -1,0 +1,6 @@
+[submodule "ansible/roles/ansible-role-vim"]
+	path = ansible/roles/ansible-role-vim
+	url = https://github.com/windisch/ansible-role-vim.git
+[submodule "ansible/roles/ansible-role-cmd-utils"]
+	path = ansible/roles/ansible-role-cmd-utils
+	url = https://github.com/windisch/ansible-role-cmd-utils.git
