@@ -22,8 +22,14 @@ RUN pip install ansible
 COPY ansible/ /ansible/
 RUN ansible-playbook /ansible/site.yml -i /ansible/inventory
 
+# Create dirs
+RUN mkdir /ssh
+RUN mkdir /src
+
 # Define working directory.
 WORKDIR /src
 
-# Define default command.
-CMD ["zsh"]
+# Copy the entrypoint
+COPY entrypoint.sh ~/entrypoint.sh
+
+ENTRYPOINT ["/bin/bash", "~/entrypoint.sh"]
